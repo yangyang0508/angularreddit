@@ -1,5 +1,6 @@
 <p>signup works!</p>
 <div class="register-section">
+    <router-outlet>
     <div class="row justify-content-center">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -8,7 +9,7 @@
                     <h4>Register</h4>
                 </div>
                 <div class="card-body">
-                    <form [formGroup] = "signupForm">
+                    <form [formGroup] = "signupForm"  (ngSubmit)="signup()">
                         <div class="form-group row">
                             <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
                                 Address</label>
@@ -53,4 +54,5 @@
         </div>
         <div class="col-md-3"></div>
     </div>
+</router-outlet>
 </div>
